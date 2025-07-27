@@ -5,25 +5,20 @@ const NetflixLandingPage = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white">
-      {/* 🔳 Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: `url(${backGround})` }}
-      />
-
-      {/* 🔳 Overlay */}
-      <div className="absolute inset-0 bg-black opacity-60" />
-
-      {/* 🔳 Main Content */}
+      <div className="absolute inset-0 bg-black opacity-60">
+        <img
+          src={backGround}
+          alt="Background"
+          className="w-full h-full object-cover opacity-60"
+        />
+      </div>
       <div className="relative z-10 flex flex-col min-h-screen">
-        {/* Header */}
         <header className="flex flex-wrap items-center justify-between px-6 py-4">
-          <div className="text-3xl text-red-600 font-extrabold tracking-wider">
+          <div className="text-4xl sm:text-3xl text-red-600 font-extrabold tracking-wide drop-shadow-md">
             NETFLIX
           </div>
 
           <div className="flex items-center gap-3 mt-3 sm:mt-0">
-            {/* Language Selector */}
             <select className="bg-black/60 border border-gray-500 text-white rounded px-3 py-1 text-sm">
               {languages.map((lang) => (
                 <option key={lang}>{lang}</option>
@@ -45,7 +40,7 @@ const NetflixLandingPage = () => {
             </h1>
 
             <p className="text-lg sm:text-xl mb-4">
-              Starts at AED 35. Cancel anytime.
+              Starts at FAK. Cancel anytime.
             </p>
 
             <p className="text-base sm:text-lg mb-6 text-gray-300">
